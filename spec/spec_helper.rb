@@ -24,7 +24,7 @@ def run!(source)
   end
 end
 
-RSpec::Matchers.define :be_go do |go_output|
+RSpec::Matchers.define :be_exp do |go_output|
   match do |ruby_source|
     @output = run!("puts #{ruby_source}").chomp
     @output == go_output
